@@ -42,4 +42,4 @@ with open('Tripadvisor_hotels.csv', 'a') as csv_file:
 
     # The for loop
     for comment_value, author_name, comment_date in data:
-        writer.writerow([comment_value, author_name, comment_date])
+        writer.writerow([comment_value, author_name, comment_date, datetime.now()])
