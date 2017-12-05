@@ -9,11 +9,11 @@ from bs4 import BeautifulSoup
 import csv
 from datetime import datetime
 f = csv.writer(open("Tripadvisor_hotels.csv", "w"))
-f.writerow(["Comment", "Author","Date"])
+f.writerow(["Comment", "Author","Date","Extraction_date"])
 
 # for loop
 data = []
-for offset in range(0, 80, 5):
+for offset in range(0, 770, 4):
     url = 'https://www.tripadvisor.fr/Hotel_Review-g187147-d197528-Reviews-or' + str(offset) + '-Le_Royal_Monceau_Raffles_Paris-Paris_Ile_de_France.html'
     # query the website and return the html to the variable 'page'
     r = requests.get(url)
